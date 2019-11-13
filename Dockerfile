@@ -9,7 +9,7 @@ ARG VERSION="v1.0.0"
 EXPOSE 11015
 
 RUN apk add --update libressl
-RUN apk --update add go curl bash libc6-compat git musl-dev && rm -fr /var/cache/apk/*
+RUN apk add go curl bash libc6-compat git musl-dev && rm -fr /var/cache/apk/*; exit 0
 
 ENV LAIRDB_HOST=lairdb
 ENV MONGO_URL=mongodb://$LAIRDB_HOST:27017/lair
