@@ -2,6 +2,10 @@ FROM mvertes/alpine-mongo:3.6.1-0
 
 LABEL maintainer="warhorse@thedarkcloud.net"
 
+ARG BUILD_RFC3339="1970-01-01T00:00:00Z"
+ARG COMMIT="local"
+ARG VERSION="v1.0.0"
+
 EXPOSE 11015
 
 RUN apk add --update libressl
