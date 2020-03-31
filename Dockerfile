@@ -4,7 +4,7 @@ LABEL maintainer="warhorse@thedarkcloud.net"
 
 ARG BUILD_RFC3339="1970-01-01T00:00:00Z"
 ARG COMMIT="local"
-ARG VERSION="v1.0.0"
+ARG VERSION="v1.0.1"
 
 EXPOSE 11015
 
@@ -18,7 +18,7 @@ ENV TRANSFORM_DIR=/tmp
 ENV GOPATH=$HOME/go
 ENV PATH=$PATH:$GOPATH/bin
 
-RUN go get -v github.com/lair-framework/api-server
+RUN go get -v github.com/x-a-n-d-e-r-k/api-server
 
 CMD mkdir /plugins
 CMD mkdir /scripts
